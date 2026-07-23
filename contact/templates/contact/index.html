@@ -10,7 +10,6 @@
 
             <thead>
                 <tr class="table-row table-row-header">
-                    <th class="table-header">ID</th>
                     <th class="table-header">First Name</th>
                     <th class="table-header">Last Name</th>
                     <th class="table-header">Phone</th>
@@ -23,15 +22,11 @@
                     <tr class="table-row">
                         <td class="table-cel">
                             <a 
-                                href="{% url "contact:contact" contact.id %}" 
+                                href="{% url 'contact:contact' contact.id %}" 
                                 class="table-link"
                             >
-                                {{ contact.id }}
+                                {{ contact.first_name }}
                             </a>
-                        </td>
-
-                        <td class="table-cel">
-                            {{ contact.first_name }}
                         </td>
 
                         <td class="table-cel">
